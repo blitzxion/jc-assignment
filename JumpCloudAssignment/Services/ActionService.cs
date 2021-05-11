@@ -14,17 +14,17 @@ namespace JumpCloudAssignment.Services
     {
         private readonly string[] _validActions = new string[2] { "jump", "run" };
 
-        private const string _errorEmptyActionMessage = @"Action cannot be empty.";
-        private const string _errorInvalidActionMessage = @"Action provided is invalid.";
-        private const string _successAddedActionMessage = ""; // Expected to be empty;
+        public const string _errorEmptyActionMessage = @"Action cannot be empty.";
+        public const string _errorInvalidActionMessage = @"Action provided is invalid.";
+        public const string _successAddedActionMessage = ""; // Expected to be empty;
 
         private readonly JsonSerializerSettings _jsonSettings
             = new JsonSerializerSettings()
             {
-                MissingMemberHandling = MissingMemberHandling.Error,
+                MissingMemberHandling = MissingMemberHandling.Error
             };
 
-        private ConcurrentBag<ActionModel> Actions { get; set; }
+        public ConcurrentBag<ActionModel> Actions { get; set; }
             = new ConcurrentBag<ActionModel>();
 
         /// <summary>
@@ -43,8 +43,7 @@ namespace JumpCloudAssignment.Services
             // Validate the action, make sure the structure is right
             // Additional properties will be ignored.
             // Missing properties will cause an error.
-            ActionModel actionObj = null;
-            if (false == TryValidateActionJson(action, out actionObj))
+            if (false == TryValidateActionJson(action, out ActionModel actionObj))
                 return _errorInvalidActionMessage;
 
             // The action is good to go, lets add it to our queue
@@ -69,6 +68,7 @@ namespace JumpCloudAssignment.Services
             // Grab the actions, group them into a stats model with the average
             var stats = Actions
                 .GroupBy(a => a.Action)
+                .OrderBy(a => a.Key)
                 .Select(a => new ActionStatsModel()
                 {
                     Action = a.Key,
