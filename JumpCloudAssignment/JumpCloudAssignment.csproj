@@ -49,6 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\JumpCloudAssignment.Lib\JumpCloudAssignment.Lib.csproj">
+      <Project>{84060290-beb4-4b07-a559-ca3887b6433c}</Project>
+      <Name>JumpCloudAssignment.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
