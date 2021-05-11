@@ -8,6 +8,7 @@ Content here is based off the information found within the following [JumpCloud 
 
 The development environment must have the following:
 
+- Windows 10
 - Microsoft Visual Studio 2019 Community Edition or greater
 - .NET 4.8 SDK
 - Powershell
