@@ -45,7 +45,7 @@ All tests can be executed by running the following script:
 runtests.bat
 ```
 
-The testing framework utulized is [XUnit](https://xunit.net/). XUnit provides a simplified, open source, community-focused unit testing tool for .NET Framework.
+The testing framework utilized is [XUnit](https://xunit.net/). XUnit provides a simplified, open source, community-focused unit testing tool for .NET Framework.
 
 ## Usage
 
