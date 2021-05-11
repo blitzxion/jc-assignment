@@ -2,6 +2,8 @@
 
 A library that adds, validates, tracks, and produces statistics on enqueued actions.
 
+Content here is based off the information found within the following [JumpCloud document](./Software%20Engineer%20-%20Backend%20Assignment.pdf)
+
 ## Requirements
 
 The development environment must have the following:
