@@ -57,9 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JumpCloudAssignment\JumpCloudAssignment.csproj">
-      <Project>{b77e9e66-3af7-45ff-973c-ddba9c65dc2e}</Project>
-      <Name>JumpCloudAssignment</Name>
+    <ProjectReference Include="..\JumpCloudAssignment.Lib\JumpCloudAssignment.Lib.csproj">
+      <Project>{84060290-beb4-4b07-a559-ca3887b6433c}</Project>
+      <Name>JumpCloudAssignment.Lib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

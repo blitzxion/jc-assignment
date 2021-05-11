@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpCloudAssignment", "Jump
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpCloudAssignment.Tests", "JumpCloudAssignment.Tests\JumpCloudAssignment.Tests.csproj", "{4292DEA8-E9F3-46FC-B780-B97A012440AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpCloudAssignment.Lib", "JumpCloudAssignment.Lib\JumpCloudAssignment.Lib.csproj", "{84060290-BEB4-4B07-A559-CA3887B6433C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4292DEA8-E9F3-46FC-B780-B97A012440AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4292DEA8-E9F3-46FC-B780-B97A012440AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4292DEA8-E9F3-46FC-B780-B97A012440AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84060290-BEB4-4B07-A559-CA3887B6433C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84060290-BEB4-4B07-A559-CA3887B6433C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84060290-BEB4-4B07-A559-CA3887B6433C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84060290-BEB4-4B07-A559-CA3887B6433C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
