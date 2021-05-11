@@ -12,13 +12,13 @@ namespace JumpCloudAssignment.Services
 {
     public class ActionService
     {
-        private string[] _validActions = new string[2] { "jump", "run" };
+        private readonly string[] _validActions = new string[2] { "jump", "run" };
 
         private const string _errorEmptyAction = @"Action cannot be empty.";
         private const string _errorInvalidAction = @"Action provided is invalid.";
         private const string _successAddedAction = ""; // Expected to be empty;
 
-        private JsonSerializerSettings _jsonSettings
+        private readonly JsonSerializerSettings _jsonSettings
             = new JsonSerializerSettings()
             {
                 MissingMemberHandling = MissingMemberHandling.Error,
