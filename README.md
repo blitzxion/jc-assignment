@@ -9,8 +9,8 @@ Content here is based off the information found within the following [JumpCloud 
 The development environment must have the following:
 
 - Windows 10
-- Microsoft Visual Studio 2019 Community Edition or greater
-- .NET 4.8 SDK
+- [Microsoft Visual Studio 2019 Community Edition](https://visualstudio.microsoft.com/downloads/) or greater
+- [.NET 4.8 SDK](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-developer-pack-offline-installer)
 - Powershell
 - Active internet connection
 
@@ -24,14 +24,14 @@ cd jc-assignment
 
 ### Building
 
-This project can be built using Visual Studio (recommended) or by running the following script:
+This project can be built using Visual Studio (recommended) or by running the following powershell script:
 ```powershell
 .\build.ps1
 ```
 
 ## Testing
 
-All tests can be executed by running the following script:
+All tests can be executed by running the following powershell script:
 
 ```powershell
 .\runtests.ps1
