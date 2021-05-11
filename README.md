@@ -23,7 +23,7 @@ cd jc-assignment
 
 ### Building
 
-This project can be built using Visual Studio (recommended) or by running the following script
+This project can be built using Visual Studio (recommended) or by running the following script:
 ```powershell
 .\build.ps1
 ```
