@@ -14,9 +14,9 @@ namespace JumpCloudAssignment.Services
     {
         private readonly string[] _validActions = new string[2] { "jump", "run" };
 
-        private const string _errorEmptyAction = @"Action cannot be empty.";
-        private const string _errorInvalidAction = @"Action provided is invalid.";
-        private const string _successAddedAction = ""; // Expected to be empty;
+        private const string _errorEmptyActionMessage = @"Action cannot be empty.";
+        private const string _errorInvalidActionMessage = @"Action provided is invalid.";
+        private const string _successAddedActionMessage = ""; // Expected to be empty;
 
         private readonly JsonSerializerSettings _jsonSettings
             = new JsonSerializerSettings()
@@ -38,20 +38,20 @@ namespace JumpCloudAssignment.Services
             action = action?.Trim();
 
             // Make sure there is an action at all.
-            if (string.IsNullOrEmpty(action)) return _errorEmptyAction;
+            if (string.IsNullOrEmpty(action)) return _errorEmptyActionMessage;
 
             // Validate the action, make sure the structure is right
             // Additional properties will be ignored.
             // Missing properties will cause an error.
             ActionModel actionObj = null;
             if (false == TryValidateActionJson(action, out actionObj))
-                return _errorInvalidAction;
+                return _errorInvalidActionMessage;
 
             // The action is good to go, lets add it to our queue
             Actions.Add(actionObj);
 
             // Return an empty string, this is expected for a successful out
-            return _successAddedAction;
+            return _successAddedActionMessage;
         }
 
 
