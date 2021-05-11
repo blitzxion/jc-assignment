@@ -11,7 +11,7 @@ The development environment must have the following:
 - Windows 10
 - [Microsoft Visual Studio 2019 Community Edition](https://visualstudio.microsoft.com/downloads/) or greater
 - [.NET 4.8 SDK](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-developer-pack-offline-installer)
-- Powershell
+- PowerShell
 - Active internet connection
 
 ## Getting Started
@@ -24,17 +24,25 @@ cd jc-assignment
 
 ### Building
 
-This project can be built using Visual Studio (recommended) or by running the following powershell script:
+This project can be built using Visual Studio (recommended) or by running the following script:
 ```powershell
+# PowerShell or...
 .\build.ps1
+
+# CMD
+build.bat
 ```
 
 ## Testing
 
-All tests can be executed by running the following powershell script:
+All tests can be executed by running the following script:
 
 ```powershell
+# PowerShell or...
 .\runtests.ps1
+
+# CMD
+runtests.bat
 ```
 
 The testing framework utulized is [XUnit](https://xunit.net/). XUnit provides a simplified, open source, community-focused unit testing tool for .NET Framework.

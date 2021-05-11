@@ -1,0 +1,1 @@
+powershell .\runtests.ps1
