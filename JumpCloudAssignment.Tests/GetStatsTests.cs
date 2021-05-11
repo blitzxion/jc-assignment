@@ -1,24 +1,24 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using JumpCloudAssignment.Services;
 using JumpCloudAssignment.Models;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace JumpCloudAssignment.Tests
 {
-    [TestClass]
     public class GetStatsTests
     {
-        [TestMethod]
+        [Fact]
         public void Get_StatsNoActions_ReturnsEmptyResult()
         {
             var service = new ActionService();
 
             var stats = service.GetStats();
 
-            Assert.IsTrue(string.IsNullOrEmpty(stats));
+            Assert.True(string.IsNullOrEmpty(stats));
         }
 
+        [Fact]
         public void Get_StatsSingleAction_ReturnsSameNumber()
         {
             var service = new ActionService();
@@ -28,12 +28,12 @@ namespace JumpCloudAssignment.Tests
 
             var expectedResults = "[{\"action\":\"jump\",\"avg\":100.0}]";
 
-            Assert.IsTrue(string.IsNullOrEmpty(test1));
-            Assert.IsFalse(string.IsNullOrEmpty(stats));
-            Assert.AreEqual(expectedResults, stats);
+            Assert.True(string.IsNullOrEmpty(test1));
+            Assert.False(string.IsNullOrEmpty(stats));
+            Assert.Equal(expectedResults, stats);
         }
 
-        [TestMethod]
+        [Fact]
         public void Get_StatsMultipleActions_ReturnsExpectedAverages()
         {
             var service = new ActionService();
@@ -45,11 +45,11 @@ namespace JumpCloudAssignment.Tests
 
             var expectedResults = "[{\"action\":\"jump\",\"avg\":150.0},{\"action\":\"run\",\"avg\":75.0}]";
 
-            Assert.IsTrue(string.IsNullOrEmpty(test1));
-            Assert.IsTrue(string.IsNullOrEmpty(test2));
-            Assert.IsTrue(string.IsNullOrEmpty(test3));
-            Assert.IsFalse(string.IsNullOrEmpty(stats));
-            Assert.AreEqual(expectedResults, stats);
+            Assert.True(string.IsNullOrEmpty(test1));
+            Assert.True(string.IsNullOrEmpty(test2));
+            Assert.True(string.IsNullOrEmpty(test3));
+            Assert.False(string.IsNullOrEmpty(stats));
+            Assert.Equal(expectedResults, stats);
         }
 
     }
