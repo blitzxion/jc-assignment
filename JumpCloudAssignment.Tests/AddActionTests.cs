@@ -75,6 +75,37 @@ namespace JumpCloudAssignment.Tests
         }
 
         [Fact]
+        public void Add_BadActionType_ReturnsErrorMessage()
+        {
+            var service = new ActionService();
+
+            var test1 = service.AddAction("{\"action\":123,\"time\":100}");
+
+            Assert.False(string.IsNullOrEmpty(test1));
+        }
+
+        [Fact]
+        public void Add_BadTimeType_ReturnsErrorMessage()
+        {
+            var service = new ActionService();
+
+            var test1 = service.AddAction("{\"action\":\"jump\",\"time\":\"OtherValue\"}");
+
+            Assert.False(string.IsNullOrEmpty(test1));
+        }
+
+        [Fact]
+        public void Add_MissionActionValue_ReturnsErrorMessage()
+        {
+            var service = new ActionService();
+
+            var test1 = service.AddAction("{\"action\":\"\",\"time\":100}");
+
+            Assert.False(string.IsNullOrEmpty(test1));
+        }
+
+
+        [Fact]
         public void Add_AsyncMultipleActions_Succeeds()
         {
             var service = new ActionService();
