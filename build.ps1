@@ -1,7 +1,7 @@
 Clear-Host
 
 $ngt = ".\tools\nuget.exe"
-$msb = "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\msbuild.exe"
+$msb = .\tools\vswhere -latest -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe | select-object -first 1
 
 Write-Host "Restoring packages..."
 & $ngt restore 

@@ -1,7 +1,12 @@
 @echo off
+setlocal enabledelayedexpansion
 cls
 SET ngt=".\tools\nuget.exe"
-SET msb="C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\msbuild.exe"
+for /f "usebackq tokens=*" %%i in (`.\tools\vswhere -latest -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe`) do (
+    SET msb="%%i" %*
+    goto exit_for
+)
+:exit_for
 
 echo Restoring packages...
 %ngt% restore 
